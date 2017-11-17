@@ -1,7 +1,3 @@
-// event listener to respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, true);
-
 // Create an array of objects. Must have quote and source keys.
 let quotes = [{
     quote: "I believe great people do things before they are ready.",
@@ -51,6 +47,14 @@ function getRandomQuote() {
   return selectedQuote
 }
 
+function randomColor() {
+  let colors = ['Tomato', 'CadetBlue', 'DeepSkyBly', 'LightBlue', 'LightSteelBlue', 'LimeGreen', 'MediumVioletRed', 'SaddleBrown', 'Chocolate']
+  let index = Math.floor(Math.random() * colors.length)
+  let selectedColor = colors[index]
+  // set random background color & call function in the printQuote function.
+  document.body.style.backgroundColor = selectedColor;
+}
+
 // Create a function that calls getRandomQuote and stores as variable.
 function printQuote() {
   let quote = getRandomQuote();
@@ -68,5 +72,16 @@ function printQuote() {
   }
   html += '</p>'
   // displays the final HTML string to the page.
-  return document.getElementById('quote-box').innerHTML = html
+  document.getElementById('quote-box').innerHTML = html;
+  // return random background color with printQuote function
+  return randomColor()
 }
+
+// set window interval change quote and background every 12 seconds.
+window.setInterval(function() {
+  printQuote();
+}, 12000);
+
+// event listener to respond to "Show another quote" button clicks
+// when user clicks anywhere on the button, the "printQuote" function is called
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
