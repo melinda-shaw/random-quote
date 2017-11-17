@@ -41,17 +41,17 @@ let quotes = [{
 
 // Create a function that selects a random quote object from the quotes array.
 function getRandomQuote() {
-  let randomIndex = Math.floor(Math.random() * quotes.length)
-  let selectedQuote = quotes[randomIndex]
+  let randomIndex = Math.floor(Math.random() * quotes.length);
+  let selectedQuote = quotes[randomIndex];
   // returns the randomly selected quote object
-  return selectedQuote
+  return selectedQuote;
 }
 
 // Create a function that selects a random background color
 function randomColor() {
-  let colors = ['Tomato', 'CadetBlue', 'DeepSkyBly', 'LightBlue', 'LightSteelBlue', 'LimeGreen', 'MediumVioletRed', 'SaddleBrown', 'Chocolate']
-  let index = Math.floor(Math.random() * colors.length)
-  let selectedColor = colors[index]
+  let colors = ['Tomato', 'CadetBlue', 'DeepSkyBly', 'LightBlue', 'LightSteelBlue', 'LimeGreen', 'MediumVioletRed', 'SaddleBrown', 'Chocolate'];
+  let index = Math.floor(Math.random() * colors.length);
+  let selectedColor = colors[index];
   // set random background color & call function in the printQuote function.
   document.body.style.backgroundColor = selectedColor;
 }
@@ -71,11 +71,11 @@ function printQuote() {
   if (quote.hasOwnProperty('year')) {
     html += '<span class="year">' + quote.year + '</span>';
   }
-  html += '</p>'
+  html += '</p>';
   // displays the final HTML string to the page.
   document.getElementById('quote-box').innerHTML = html;
   // return random background color with printQuote function
-  return randomColor()
+  return randomColor();
 }
 
 // set window interval change quote and background every 12 seconds.
