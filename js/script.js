@@ -7,33 +7,39 @@ let quotes = [{
     quote: "I believe great people do things before they are ready.",
     source: 'Amy Poehler',
     citation: 'Yes Please',
-    year: 2014 // optional but should be a number
-  },
-  {
-    quote: "When you can’t find someone to follow, you have to find a way to lead by example.",
-    source: 'Roxane Gay',
-    citation: 'Bad Feminist',
-    year: 2014
-  },
-  {
-    quote: "What you do makes a difference, and you have to decide what kind of difference you want to make.",
-    source: 'Jane Goodall',
-  },
-  {
-    quote: "To all the little girls who are watching, never doubt that you are valuable and powerful and deserving of every chance and opportunity in the world to pursue and achieve your own dreams.",
-    source: 'Hillary Clinton',
-    citation: 'Concession Speech',
-    year: 2016
-  },
-  {
-    quote: "We forget all too soon the things we thought we could never forget.",
-    source: 'Joan Didion',
+    year: 2014,
+    tags: 'empowerment'
   },
   {
     quote: "You can't be that kid standing at the top of the water slide, overthingking it. You have to go down the chute.",
     source: 'Tina Fey',
     citation: 'Bossypants',
-    year: 2011 // optional but should be a number
+    year: 2011,
+    tags: 'humor, empowerment'
+  },
+  {
+    quote: "To all the little girls who are watching, never doubt that you are valuable and powerful and deserving of every chance and opportunity in the world to pursue and achieve your own dreams.",
+    source: 'Hillary Clinton',
+    citation: 'Concession Speech',
+    year: 2016,
+    tags: 'empowerment, feminism, politics'
+  },
+  {
+    quote: "We forget all too soon the things we thought we could never forget.",
+    source: 'Joan Didion',
+    tags: 'life'
+  },
+  {
+    quote: "What you do makes a difference, and you have to decide what kind of difference you want to make.",
+    source: 'Jane Goodall',
+    tags: 'empowerment'
+  },
+  {
+    quote: "When you can’t find someone to follow, you have to find a way to lead by example.",
+    source: 'Roxane Gay',
+    citation: 'Bad Feminist',
+    year: 2014,
+    tags: 'empowerment'
   }
 ];
 
