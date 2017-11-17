@@ -47,6 +47,7 @@ function getRandomQuote() {
   return selectedQuote
 }
 
+// Create a function that selects a random background color
 function randomColor() {
   let colors = ['Tomato', 'CadetBlue', 'DeepSkyBly', 'LightBlue', 'LightSteelBlue', 'LimeGreen', 'MediumVioletRed', 'SaddleBrown', 'Chocolate']
   let index = Math.floor(Math.random() * colors.length)
