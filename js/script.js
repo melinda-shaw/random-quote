@@ -26,7 +26,6 @@ let quotes = [{
   {
     quote: "What you do makes a difference, and you have to decide what kind of difference you want to make.",
     source: 'Jane Goodall',
-    citation: 'The Washington Post',
   },
   {
     quote: "To all the little girls who are watching, never doubt that you are valuable and powerful and deserving of every chance and opportunity in the world to pursue and achieve your own dreams.",
@@ -51,7 +50,13 @@ Create a function named getRandomQuote which:
 selects a random quote object from the quotes array
 returns the randomly selected quote object
 */
-let getRandomQuote = () => {}
+
+function getRandomQuote() {
+  let randomIndex = Math.floor(Math.random() * quotes.length)
+  let selectQuote = quotes[randomIndex]
+  return selectQuote
+}
+getRandomQuote()
 
 /*
 Create a function named printQuote which follows these rules:
@@ -68,4 +73,28 @@ printQuote doesn't add a for a missing citation or a if the year property is mis
 printQuote displays the final HTML string to the page. You can use this JS snippet to accomplish that: document.getElementById('quote-box').innerHTML
 */
 
-let printQuote = () => {}
+function printQuote() {
+  // let quote = getRandomQuote();
+  let quote = {
+    quote: 'I believe great people do things before they are ready.',
+    source: 'Amy Poehler',
+    citation: 'Yes Please',
+    year: 2014
+  }
+
+  let html = '';
+  html += '<p class="quote">' + quote.quote + '</p>';
+  html += '<p class="source">' + quote.source;
+  // if there is a citation --- add it
+  if (quote.hasOwnProperty('citation')) {
+    html += '<span class="citation">' + quote.citation + '</span>';
+  }
+  // if there is a year --- add it
+  if (quote.hasOwnProperty('year')) {
+    html += '<span class="year">' + quote.year + '</span>';
+  }
+  html += '</p>'
+  let display = document.getElementById('quote-box').innerHTML
+
+  display = html
+}
