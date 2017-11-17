@@ -1,7 +1,4 @@
 # Random Quote Generator
-> Project 1
+> A simple javascript quote generator for Treehouse FSJS Techdegree project
 
-A random quote will be generated. Users can:
-
-* Click the button for a random quote
-* Have fun!
+Displays a quote. When the "new quote" button is clicked a new random quote is displayed.
